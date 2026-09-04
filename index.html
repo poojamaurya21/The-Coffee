@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <header>
+        <h1>☕Coffee Order Builder</h1>
+    </header>
+    <main class="app">
+        <section class="panel" aria-label="Coffee Order Options">
+            <div class="option-group">
+                <h2>DRINK</h2>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="drink" value="espresso" checked>
+                        Espresso
+                    </label>
+                     <label>
+                        <input type="radio" name="drink" value="latte">
+                        Latte
+                    </label>
+                    <label>
+                        <input type="radio" name="drink" value="cappuccino">
+                        Cappuccino
+                    </label>
+                    <label>
+                    <input type="radio" name="drink" value="matcha">
+                        Matcha
+                    </label>
+                    <label>
+                        <input type="radio" name="drink" value="chai">
+                        Chai
+                    </label>
+                </div>
+            </div>
+
+            <div class="option-group">
+                <h2>SIZE</h2>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="size" value="small" checked>
+                        Small
+                    </label>
+                    <label>
+                        <input type="radio" name="size" value="medium" checked>
+                        Medium
+                    </label>
+                    <label>
+                        <input type="radio" name="size" value="large">
+                        Large
+                    </label>
+                </div>
+            </div>
+             <div class="option-group">
+                <h2>MILK</h2>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="milk" value="regular" checked>
+                        Regular
+                    </label>
+                     <label>
+                        <input type="radio" name="milk" value="oat">
+                        Oat
+                    </label>
+                    <label>
+                        <input type="radio" name="milk" value="almond">
+                        Almond
+                    </label>
+                    <label>
+                    <input type="radio" name="milk" value="soy">
+                        Soy
+                    </label>
+                    <label>
+                        <input type="radio" name="milk" value="none">
+                        No Milk
+                    </label>
+                </div>
+            </div>
+             <div class="option-group">
+                <h2>Extras</h2>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="extras" value="extrashot">
+                        extra shot
+                    </label>
+                     <label>
+                        <input type="checkbox" name="extras" value="vanilla">
+                        Vanilla Syrup
+                     </label>
+                    <label>
+                        <input type="checkbox" name="extras" value="caramel">
+                        Caramel Syrup   
+                    </label>
+                    <label>
+                        <input type="checkbox" name="extras" value="whipped">
+                        Whipped Cream
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <section class="visual" aria-label="Coffee Order Visual">
+            <div class="cup-scene">
+                <div class="cup" id="cup">
+                  <div class="cup-fill"></div>
+                  <div class="cup-shine"></div>
+                </div>
+                  <div class="cup-base"></div>
+                  <div class="cup-handle"></div> 
+                  
+                <div class="badges" id="badges">
+                  <span class="badge" id="badge-extrashot">+</span>
+                  <span class="badge" id="badge-vanilla">^</span>
+                  <span class="badge" id="badge-caramel">+</span>
+                  <span class="badge" id="badge-whipped">-</span>
+                </div>
+            </div>
+
+            <div class="summary" id="summary" aria-live="polite"></div>
+          </section>
+        </main>
+        <script src="script.js"></script>
+      </body>
+    </html>
+              
+
+              
+
+   
