@@ -12,13 +12,17 @@ const prices = {
         cappuccino: 3.6,
         matcha: 4.0,
         chai: 3.5,
-        small: 0.0,
-        medium: 0.5,
+        small: 0.50,
+        medium: 0.75,
         large: 1.0,
         extrashot: 1.0,
         vanilla: 0.5,
         caramel: 0.6,
         whipped: 0.5,
+        none: 0.0,
+        soy: 0.5,
+        almond: 0.5,
+        oat: 0.5,   
     };
 
 const drinkColours = {
@@ -30,9 +34,9 @@ const drinkColours = {
 };    
 
 const sizeHeight = {
-    small: "40%",
+    small: "45%",
     medium: "65%",
-    large: "90%",
+    large: "95%",
 };
 
 const extraLabels = {
@@ -72,7 +76,7 @@ function updateSummary() {
         (e) => `
         <div class="summary-row">
             <span>${extraLabels[e]}</span>
-            <span>+$${prices[e].toFixed(2)}</span>
+            <span>$${prices[e].toFixed(2)}</span>
         </div>`,
      )
      .join("");
@@ -85,11 +89,11 @@ function updateSummary() {
         </div>
         <div class="summary-row">
             <span>${cap(order.size)}</span>
-            <span>$${prices[order.size] > 0 ? "+$" + prices[order.size].toFixed(2) : "-"}</span>
+            <span>$${prices[order.size] > 0 ? "" + prices[order.size].toFixed(2) : ""}</span>
         </div>
         <div class="summary-row">
         <span>${milkLabel}</span>
-        <span>-</span>
+        <span>$${prices[order.milk].toFixed(2)}</span>
         </div>
         ${extraRows}
         <hr class="summary-divider" />
